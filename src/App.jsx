@@ -258,6 +258,7 @@ const BalanceLabel = styled.div`
     font-size: 14px;
     color: #566e8e;
     margin-bottom: 4px;
+    margin-top: 15px;
     font-weight: 600;
     letter-spacing: 0.5px;
 `;
@@ -266,7 +267,7 @@ const Balance = styled.p`
     color: #EB8317;
     font-weight: 700;
     font-size: 24px;
-    margin: 0;
+    margin: 0px;
 `;
 
 const CardList = styled.div`
@@ -299,7 +300,7 @@ const CardDigits = styled.span`
 const CardAlias = styled.span`
     display: block;
     font-size: 14px;
-    color: #566e8e;
+    color: darkorange;
     margin-top: 4px;
 `;
 
