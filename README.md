@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Banco Andino CVV Dinámico
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+Esta aplicación web simula un sistema bancario para Banco Andino que incorpora la funcionalidad de CVV dinámico en las tarjetas de crédito y débito. El CVV dinámico es un código de seguridad temporal que cambia periódicamente para proteger las transacciones en línea, incrementando la seguridad y reduciendo el riesgo de fraude.
 
-In the project directory, you can run:
+## Funcionalidades principales
 
-### `npm start`
+- Login Simulado con correo y contraseña predefinidos.
+- Dashboard personalizado con saludo, menú y saldo fijo.
+- Gestión de tarjetas con activación y desactivación del CVV dinámico.
+- Visualización en “Mis Tarjetas” solo de tarjetas con CVV activo.
+- Visualización segura del CVV dinámico con autenticación secundaria y temporizador circular de 60 segundos.
+- Confirmación y autenticación MFA/biometría para desactivar CVV dinámico.
+- Menú lateral responsivo con opciones habilitadas y deshabilitadas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologías utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 18, React Router v6, Styled Components, QRCode.react, JavaScript ES6+.
+- Git y GitHub para control de versiones y hospedaje.
 
-### `npm test`
+## Estructura del proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- App.jsx: rutas y estado global de tarjetas.
+- DashboardPage.jsx: saldo y listado de tarjetas.
+- SecurityPage.jsx: activación/desactivación de CVV dinámico.
+- MyCardsPage.jsx: visualización de CVV con temporizador.
+- LoginPage.jsx y LandingPage.jsx: login simulado.
+- Componentes y estilos organizados en carpetas según corresponda.
 
-### `npm run build`
+## Instalación y ejecución
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clonar repositorio, instalar dependencias con `npm install` y correr con `npm start`. Abrir en `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Uso de la aplicación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Iniciar sesión con credenciales predeterminadas.
+- Navegar por menú a Dashboard, Seguridad y Mis Tarjetas.
+- Activar CVV dinámico en Seguridad aceptando términos.
+- Desactivar CVV dinámico con confirmación y autenticación secundaria.
+- En Mis Tarjetas, ver solo tarjetas activas y visualizar CVV con temporizador circular de 60 segundos que se oculta automáticamente.
+- El sistema solicita autenticación secundaria cada vez que se quiere ver o desactivar el CVV dinámico.
 
-### `npm run eject`
+## Consideraciones de seguridad
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- MFA/biometría simulada mediante prompt para proteger acceso a CVV.
+- CVV visible solo durante 60 segundos con contador visual circular.
+- Aplicación orientada a demostración funcional, no lista para producción real.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Mejoras futuras
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Integrar APIs reales de autenticación multifactor y biometría.
+- Persistencia en backend para estados y datos.
+- Mejoras de accesibilidad y responsividad.
+- Soporte multilenguaje y pruebas automatizadas.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Autor
 
-## Learn More
+Thomas Esteban  
+[GitHub](https://github.com/thomasesteban22)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Licencia
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT License
